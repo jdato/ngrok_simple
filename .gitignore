@@ -2,7 +2,6 @@
 
 # Rust
 /target
-Cargo.lock
 
 # Logs
 logs
