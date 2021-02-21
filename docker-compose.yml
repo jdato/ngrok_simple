@@ -1,0 +1,12 @@
+version: '2'
+services:
+
+  ngrok_simple:
+    build:
+      context: .
+    image: ngrok_simple:latest
+    environment:
+      HOST: e.g. 192.168.0.2
+      PORT: e.g. 8080
+      AUTH: usr:pwd
+      NGROK_AUTHTOKEN: YOUR_NGROK_AUTHTOKEN_FROM_NGROK.IO

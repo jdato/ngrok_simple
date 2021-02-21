@@ -1,0 +1,9 @@
+.DS_Store
+
+# Rust
+/target
+Cargo.lock
+
+# Logs
+logs
+*.log
