@@ -1,4 +1,5 @@
 mod ngrok;
+
 use url::Url;
 fn main() -> std::io::Result<()> {
     let host = std::env::var("HOST").expect("Expected hostname.");
@@ -19,7 +20,10 @@ fn main() -> std::io::Result<()> {
 
     println!("Tunnel is open at {:?}", public_url);
 
-    loop {}
+    // Sleep for a year
+    std::thread::sleep(std::time::Duration::from_secs(31_536_000));
+
+    println!("Woke up after a year. Stopping this process.");
 
     Ok(())
 }
