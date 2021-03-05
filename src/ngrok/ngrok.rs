@@ -237,8 +237,9 @@ impl Builder {
         let proc = Command::new(self.executable.unwrap_or_else(|| "./ngrok".to_string()))
             .stdout(Stdio::piped())
             .arg("http")
-            .arg("-auth")
+            .arg("--auth")
             .arg(auth.to_string())
+            .arg("--region=eu")
             .arg(format!("{}:{}", host.to_string(), port.to_string()))
             .spawn()?;
 
